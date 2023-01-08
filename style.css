@@ -1,114 +1,118 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.main{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url(nature.jpg);
-    background-size: cover;
-    background-position: center;
-    
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+    url(nature.jpg);
+  background-size: cover;
+  background-position: center;
 }
-.ankar{
-    height: 100px;
-    width:95%;
+.ankar {
+  height: 100px;
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.ankar ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+  margin-right: 20px;
+  position: relative;
+}
+.ankar ul li::after {
+  content: "";
+  bottom: 5px;
+  left: 5px;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: darkorange;
+  transition: 0.5s;
+}
+.ankar ul li:hover::after {
+  width: 85%;
+}
+.ankar ul li a {
+  color: aliceblue;
+  text-decoration: none;
+}
+.main-head h1 {
+  color: rgb(251, 255, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+.main-head p {
+  color: rgb(255, 255, 0);
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+}
+.border-work {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+  padding: 15px;
+}
+button {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  color: darkred;
+  border: 1px solid #009688;
+  background: transparent;
+  position: relative;
+  font-weight: bolder;
+  cursor: pointer;
+  z-index: 1;
+}
+span {
+  background: #ffffff;
+  height: 100%;
+  width: 0%;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1;
+  transition: 1s;
+}
+button:hover span {
+  width: 100%;
+}
+.marquee-work {
+  text-align: center;
+  color: dodgerblue;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-size: 17px;
+}
+/* footer */
+.footer ul {
+    margin: 5rem;
     display: flex;
-    justify-content:flex-end;
-    align-items: center;
-    }
-    .ankar ul li{
-        list-style: none;
-        display: inline-block;
-        padding: 10px;
-       margin-right: 20px;
-       position: relative;
-    }
-    .ankar ul li::after{
-        content: '';
-        bottom: 5px;
-        left: 5px;
-        position: absolute;
-        width: 0%;
-        height: 2px;
-       background: darkorange;
-        transition: 0.5s;
-    }
-    .ankar ul li:hover::after{
-        width: 85%;
-    }
-    .ankar ul li a{
-        color: aliceblue;
-        text-decoration: none;
-    }
-    .main-head h1{
-        color: rgb(251, 255, 0);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top:10%;
-    }
-    .main-head p{
-        color: rgb(255, 255, 0);
-        font-family:sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top:1%;
-    }
-    .border-work{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top:2%;
-        padding: 15px;
-        
-     
-    }
-    button{
-        width: 200px;
-        padding: 15px 0;
-        text-align: center;
-        margin: 20px 10px;
-        border-radius: 25px;
-        color: darkred;
-        border:1px solid  #009688;
-        background: transparent;
-        position: relative;
-        font-weight: bolder;
-        cursor: pointer;
-        z-index: 1;
-        
-    }
-    span{
-        background:  #ffffff;
-        height: 100%;
-        width:0%;
-        border-radius: 25px;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        overflow: hidden;
-        z-index: -1;
-        transition: 1s;
-    }
-    button:hover span{
-        width: 100%;
-    }
-    .marquee-work{
-        text-align: center;
-        color: dodgerblue;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-weight: bold;
-        font-size: 17px;
-    }
-    .footer ul{
-     display: flex;
-     gap: 10px;
-    }
-   .footer a{
-    color: white;
-    text-decoration: none;
-   }
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.footer ul li {
+  list-style-type: none;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+}
